@@ -1,3 +1,0 @@
-// Spielplatz
-
-console.log("Spielplatz")
