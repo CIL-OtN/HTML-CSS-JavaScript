@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Water+Brush&display=swap");
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Water Brush', cursive; */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@100;400&family=Water+Brush&display=swap");
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Water Brush', cursive; */
+
+/* Note 1: 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #13171b;
+}
+
+.product-small-img img {
+  height: 92px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block; 
+  opacity: .7;
+  border-radius: 4px;
+}
+
+.product-small-img img:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  scale: 1.1;
+  opacity: 1;
+
+}
+
+.product-small-img {
+  float: left;
+}
+
+.product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-container img {
+  border-radius: 4px;
+  height: 500px;
+}
+
+.img-container {
+  float: right;
+  padding: 10px;
+}
+

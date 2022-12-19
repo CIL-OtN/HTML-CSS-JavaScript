@@ -1,0 +1,75 @@
+
+
+// let hello = () => {
+//     return "Privet Nina^^";
+// }
+
+// const h = document.querySelector('#firstDiv');
+
+// const motherUl = document.createElement('ul');
+
+// const textWaldemar = document.createTextNode('Waldemar Schneider');
+// const textNina = document.createTextNode('Nina Schneider')
+
+// let options = [textWaldemar, textNina]
+
+// // style element div with add class .styleDiv
+// h.innerHTML = hello();
+// h.classList.add('styleDiv');
+
+
+// for(let i=0; i < 2; i++) {
+
+//     let childrenLi = document.createElement('li');
+
+//     childrenLi.appendChild(options[i]);
+//     motherUl.appendChild(childrenLi);
+//     h.appendChild(motherUl);
+// }
+
+    
+
+
+let thumbnails = document.getElementsByClassName('thumbnail');
+let slider = document.getElementById('slider');
+
+let buttonRight = document.getElementById('slide-right');
+let buttonLeft = document.getElementById('slide-left');
+
+buttonLeft.addEventListener('click', function(){
+    slider.scrollLeft -= 125;
+})
+
+buttonRight.addEventListener('click', function(){
+    slider.scrollLeft += 125;
+})
+
+const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+// alert(maxScrollLeft);
+// alert("Left Scroll:" + slider.scrollLeft);
+
+//AUTO PLAY THE SLIDER 
+function autoPlay() {
+    if (slider.scrollLeft > (maxScrollLeft - 1)) {
+        slider.scrollLeft -= maxScrollLeft;
+    } else {
+        slider.scrollLeft += 1;
+    }
+}
+let play = setInterval(autoPlay, 50);
+
+// PAUSE THE SLIDE ON HOVER
+for (var i=0; i < thumbnails.length; i++){
+
+    console.log(thumbnails[i]);
+
+
+thumbnails[i].addEventListener('mouseover', function() {
+    clearInterval(play);
+});
+
+thumbnails[i].addEventListener('mouseout', function() {
+    return play = setInterval(autoPlay, 50);
+    console.log(thumbnails[i]);
+});
+}

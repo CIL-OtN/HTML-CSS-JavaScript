@@ -1,0 +1,105 @@
+.style-switcher {
+  /* border: 1px solid red; */
+  position: fixed;
+  right: 0;
+  /* right: 10px; */
+  top: 60px;
+  padding: 15px;
+  width: 70px;
+  height: 270px;
+  border: 1px solid var(--segmentation_border);
+  background: var(--bg_light);
+  /* border: 1px solid red; */
+  z-index: 101;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+  /* transform: translateX(105%); */
+}
+
+.style-switcher.open {
+  transform: translateX(-20px);
+}
+
+.style-switcher .s-icon {
+  border: 1px solid var(--segmentation_border);
+
+  position: absolute;
+  /* height: 40px; */
+  width: 40px;
+  text-align: center;
+  font-size: 20px;
+  background: var(--bg_light); /* Vielleicht doch noch transparent gestalten */
+  color: var(--svg_color);
+  right: 100%;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.style-switcher .s-icon i {
+  /* border: 1px solid red; */
+  line-height: 40px;
+}
+
+.style-switcher .style-switcher-toggler {
+  top: 0;
+  margin-right: 20px;
+}
+
+.style-switcher .day-night {
+  top: 55px;
+  margin-right: 20px;
+}
+
+.style-switcher h4 {
+  /* border: 1px solid red; */
+  text-align: center;
+  margin: 0 0 10px;
+  color: var(--text_block_paragraph);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.style-switcher .colors {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  align-items: center;
+  /* padding-bottom: 5px; */
+}
+
+.style-switcher .colors span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-bottom: 9px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.style-switcher .color-1 {
+  background: #ec1839;
+}
+
+.style-switcher .color-2 {
+  background: #fa5b0f;
+}
+
+.style-switcher .color-3 {
+  /* background: #37b182; */
+  background: #b5ff00;
+}
+
+.style-switcher .color-4 {
+  /* background: #1854b4; */
+  background: #00dfc4;
+}
+
+.style-switcher .color-5 {
+  background: #f021b2;
+}

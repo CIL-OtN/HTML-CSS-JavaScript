@@ -1,0 +1,86 @@
+/* ===== Contact Section BEGIN ===== */
+
+/* ===== Contact Form BEGIN ===== */
+.contact__form {
+  /* border: 1px solid red; */
+
+  margin: 50px 0;
+  width: 80%;
+  /* gap: 10px; */
+}
+
+.row {
+  /* border: 1px solid yellow; */
+  display: flex;
+  gap: 25px;
+}
+
+.inputBox {
+  /* border: 1px solid yellow; */
+  
+  position: relative;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.inputBox input, textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid var(--segmentation_border);
+  background: var(--segmentation_fill);
+  outline: none; 
+  color: var(--text_block_paragraph);
+  font-size: var(--standard-font-size);
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  pointer-events: none;   
+  font-size: var(--standard-font-size);
+  color: var(--inputbox_color);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: 0.1s;
+}
+
+.inputBox input:valid  ~ span, 
+.inputBox textarea:valid ~ span,   
+.inputBox input:focus  ~ span,
+.inputBox textarea:focus  ~ span   
+{    
+
+  color: var(--text_block_paragraph);
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.75em;
+  padding: 0 10px;
+  background: var(--bg_bright);
+  border-left: 1px solid var(--skin-color);
+  border-right: 1px solid var(--skin-color);
+  letter-spacing: 0.2em;
+}
+/* ===== Contact Form END ===== */
+
+
+
+
+@media (max-width: 1199px) {
+  .row {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+/* ===== Contact Section END ===== */

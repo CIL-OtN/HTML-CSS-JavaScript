@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column;  */
+  /* margin: auto; */
+}
+
+.main-container {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  width: min(90%, 1400px);
+}
+
+/* Maintitle style */
+.maintitle-container {
+  /* border: 1px solid red; */
+  margin: 2.5rem auto;
+}
+
+.maintitle {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 3px 8px;
+}
+
+.maintitle::after {
+  content: "";
+  background-color: red;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* Subtitle style */
+.subtitle-container {
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px 0;
+  margin: 16px 0;
+}
+
+.subtitle {
+  /* border: 1px solid green; */
+  position: relative;
+  padding: 4px 8px;
+}
+
+.subtitle::after {
+  content: '';
+  background-color: red;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s linear;
+}
+
+.subtitle:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1); 
+}
+
+
+/* Logo row style */
+.logo-container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;  /* alternativ je nach dem wie viele Logos */
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+  margin: 2rem 0;
+}
+
+.logo-container img {
+  /* border: 1px solid red; */
+  width: 70px;
+  aspect-ratio: 1/1;
+}
+
+.logo-container img:hover {
+  transform: scale(1.6);
+}
+
+/* Image frame style */
+.imageframe-container {
+  background-color:#0C152D;
+
+  margin: 2rem 0;
+}
+
+.imageframe-container .imageframe {
+  display: flex;
+  width: 20rem;
+}
+
+.imageframe-container .imageframe img {
+  width: 100%;
+
+  /* border-inline-start: 1px solid; */
+  /* border-block-start: 1px solid; */
+
+
+}
+
+
+
+
+.goldenBox-container {
+  /* border: 1px solid white; */
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.goldenBox {
+  /* border: 1px solid red; */
+  width: 150px;
+  height: 100%;  
+  padding: 26px;
+  margin-bottom: 0rem;
+  /* background: linear-gradient(130.88deg, rgba(244, 205, 104, 0.2) 0%, #0d0d0d00 30.71%); */
+  background-blend-mode: lighten;
+  border-inline-start: 1px solid;
+  border-block-start: 1px solid;
+  
+  border-image-source: radial-gradient(
+  circle at top left, 
+  #BF841A, transparent 90%);
+  border-image-slice: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

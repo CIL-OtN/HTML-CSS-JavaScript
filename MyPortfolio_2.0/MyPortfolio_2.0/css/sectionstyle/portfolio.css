@@ -1,0 +1,26 @@
+/* ===== About Section BEGIN ===== */
+
+
+/* ===== My Work BEGIN ===== */
+
+.work__container {
+  grid-template-columns: repeat(3, 330px);
+  gap: 1.8rem;
+  justify-content: center; 
+}
+
+
+.work__card img {
+  width: 330px;
+} 
+
+
+/* .portfolio__container {
+background-color: blue; 
+} */
+
+
+/* ===== My Work END ===== */
+
+
+/* ===== About Section END ===== */

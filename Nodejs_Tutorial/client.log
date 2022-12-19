@@ -1,0 +1,78 @@
+2022-10-14 17:53:55 (UTC) iota_client::node_manager::syncing         [94mDEBUG[0m sync_nodes
+2022-10-14 17:53:55 (UTC) reqwest::connect                           [94mDEBUG[0m starting new connection: https://api.testnet.shimmer.network/
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m No cached session for DnsName(DnsName(DnsName("api.testnet.shimmer.network")))
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m Not resuming any session
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m Using ciphersuite TLS13_AES_256_GCM_SHA384
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m Not resuming
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m TLS1.3 encrypted extensions: [ServerNameAck, Protocols([6832])]
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m ALPN protocol is Some(b"h2")
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 17:53:55 (UTC) reqwest::async_impl::client                [94mDEBUG[0m response '200 OK' for https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 17:53:55 (UTC) iota_client::node_manager::http_client     [94mDEBUG[0m GET: 198 ms for 200 OK https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 17:53:55 (UTC) rustls::conn                               [94mDEBUG[0m Sending warning alert CloseNotify
+2022-10-14 17:53:55 (UTC) iota_client::message_interface::message_handler [94mDEBUG[0m Message: GetInfo
+2022-10-14 17:53:55 (UTC) reqwest::connect                           [94mDEBUG[0m starting new connection: https://api.testnet.shimmer.network/
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m No cached session for DnsName(DnsName(DnsName("api.testnet.shimmer.network")))
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m Not resuming any session
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m Using ciphersuite TLS13_AES_256_GCM_SHA384
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m Not resuming
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m TLS1.3 encrypted extensions: [ServerNameAck, Protocols([6832])]
+2022-10-14 17:53:55 (UTC) rustls::client::hs                         [94mDEBUG[0m ALPN protocol is Some(b"h2")
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 17:53:55 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 17:53:55 (UTC) reqwest::async_impl::client                [94mDEBUG[0m response '200 OK' for https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 17:53:55 (UTC) iota_client::node_manager::http_client     [94mDEBUG[0m GET: 169 ms for 200 OK https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 17:53:55 (UTC) iota_client::message_interface::message_handler [94mDEBUG[0m Response: Info(NodeInfoWrapper { node_info: InfoResponse { name: "HORNET", version: "2.0.0-rc.2", status: StatusResponse { is_healthy: true, latest_milestone: LatestMilestoneResponse { index: 1526937, timestamp: Some(1665770030), milestone_id: Some("0xd92edd89e38fef9edc19a345c7839f69f7c1a6453da131f5831c9b912a15a3d0") }, confirmed_milestone: ConfirmedMilestoneResponse { index: 1526937, timestamp: Some(1665770030), milestone_id: Some("0xd92edd89e38fef9edc19a345c7839f69f7c1a6453da131f5831c9b912a15a3d0") }, pruning_index: 788179 }, supported_protocol_versions: [2], protocol: ProtocolResponse { version: 2, network_name: "testnet", bech32_hrp: "rms", min_pow_score: 1500, below_max_depth: 15, rent_structure: RentStructureResponse { v_byte_cost: 100, v_byte_factor_key: 10, v_byte_factor_data: 1 }, token_supply: "1450896407249092" }, pending_protocol_parameters: [], base_token: BaseTokenResponse { name: "Shimmer", ticker_symbol: "SMR", unit: "SMR", subunit: Some("glow"), decimals: 6, use_metric_prefix: false }, metrics: MetricsResponse { blocks_per_second: 1.6, referenced_blocks_per_second: 1.6, referenced_rate: 100.0 }, features: [] }, url: "https://api.testnet.shimmer.network" })
+2022-10-14 18:48:56 (UTC) iota_client::node_manager::syncing         [94mDEBUG[0m sync_nodes
+2022-10-14 18:48:56 (UTC) reqwest::connect                           [94mDEBUG[0m starting new connection: https://api.testnet.shimmer.network/
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m No cached session for DnsName(DnsName(DnsName("api.testnet.shimmer.network")))
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m Not resuming any session
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m Using ciphersuite TLS13_AES_256_GCM_SHA384
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m Not resuming
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m TLS1.3 encrypted extensions: [ServerNameAck, Protocols([6832])]
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m ALPN protocol is Some(b"h2")
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:48:56 (UTC) reqwest::async_impl::client                [94mDEBUG[0m response '200 OK' for https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:48:56 (UTC) iota_client::node_manager::http_client     [94mDEBUG[0m GET: 231 ms for 200 OK https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:48:56 (UTC) rustls::conn                               [94mDEBUG[0m Sending warning alert CloseNotify
+2022-10-14 18:48:56 (UTC) iota_client::message_interface::message_handler [94mDEBUG[0m Message: GetInfo
+2022-10-14 18:48:56 (UTC) reqwest::connect                           [94mDEBUG[0m starting new connection: https://api.testnet.shimmer.network/
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m No cached session for DnsName(DnsName(DnsName("api.testnet.shimmer.network")))
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m Not resuming any session
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m Using ciphersuite TLS13_AES_256_GCM_SHA384
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m Not resuming
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m TLS1.3 encrypted extensions: [ServerNameAck, Protocols([6832])]
+2022-10-14 18:48:56 (UTC) rustls::client::hs                         [94mDEBUG[0m ALPN protocol is Some(b"h2")
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:48:56 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:48:56 (UTC) reqwest::async_impl::client                [94mDEBUG[0m response '200 OK' for https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:48:56 (UTC) iota_client::node_manager::http_client     [94mDEBUG[0m GET: 148 ms for 200 OK https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:48:56 (UTC) iota_client::message_interface::message_handler [94mDEBUG[0m Response: Info(NodeInfoWrapper { node_info: InfoResponse { name: "HORNET", version: "2.0.0-rc.2", status: StatusResponse { is_healthy: true, latest_milestone: LatestMilestoneResponse { index: 1527598, timestamp: Some(1665773335), milestone_id: Some("0xd595d51d8d02abc9fc86c46c3b9cc44f2736ff4c3e7ee812cbe27a70c82e7e23") }, confirmed_milestone: ConfirmedMilestoneResponse { index: 1527598, timestamp: Some(1665773335), milestone_id: Some("0xd595d51d8d02abc9fc86c46c3b9cc44f2736ff4c3e7ee812cbe27a70c82e7e23") }, pruning_index: 761370 }, supported_protocol_versions: [2], protocol: ProtocolResponse { version: 2, network_name: "testnet", bech32_hrp: "rms", min_pow_score: 1500, below_max_depth: 15, rent_structure: RentStructureResponse { v_byte_cost: 100, v_byte_factor_key: 10, v_byte_factor_data: 1 }, token_supply: "1450896407249092" }, pending_protocol_parameters: [], base_token: BaseTokenResponse { name: "Shimmer", ticker_symbol: "SMR", unit: "SMR", subunit: Some("glow"), decimals: 6, use_metric_prefix: false }, metrics: MetricsResponse { blocks_per_second: 1.6, referenced_blocks_per_second: 1.8, referenced_rate: 112.5 }, features: [] }, url: "https://api.testnet.shimmer.network" })
+2022-10-14 18:50:23 (UTC) iota_client::node_manager::syncing         [94mDEBUG[0m sync_nodes
+2022-10-14 18:50:23 (UTC) reqwest::connect                           [94mDEBUG[0m starting new connection: https://api.testnet.shimmer.network/
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m No cached session for DnsName(DnsName(DnsName("api.testnet.shimmer.network")))
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m Not resuming any session
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m Using ciphersuite TLS13_AES_256_GCM_SHA384
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m Not resuming
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m TLS1.3 encrypted extensions: [ServerNameAck, Protocols([6832])]
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m ALPN protocol is Some(b"h2")
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:50:23 (UTC) reqwest::async_impl::client                [94mDEBUG[0m response '200 OK' for https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:50:23 (UTC) iota_client::node_manager::http_client     [94mDEBUG[0m GET: 188 ms for 200 OK https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:50:23 (UTC) rustls::conn                               [94mDEBUG[0m Sending warning alert CloseNotify
+2022-10-14 18:50:23 (UTC) iota_client::message_interface::message_handler [94mDEBUG[0m Message: GetInfo
+2022-10-14 18:50:23 (UTC) reqwest::connect                           [94mDEBUG[0m starting new connection: https://api.testnet.shimmer.network/
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m No cached session for DnsName(DnsName(DnsName("api.testnet.shimmer.network")))
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m Not resuming any session
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m Using ciphersuite TLS13_AES_256_GCM_SHA384
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m Not resuming
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m TLS1.3 encrypted extensions: [ServerNameAck, Protocols([6832])]
+2022-10-14 18:50:23 (UTC) rustls::client::hs                         [94mDEBUG[0m ALPN protocol is Some(b"h2")
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:50:23 (UTC) rustls::client::tls13                      [94mDEBUG[0m Ticket saved
+2022-10-14 18:50:23 (UTC) reqwest::async_impl::client                [94mDEBUG[0m response '200 OK' for https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:50:23 (UTC) iota_client::node_manager::http_client     [94mDEBUG[0m GET: 136 ms for 200 OK https://api.testnet.shimmer.network/api/core/v2/info
+2022-10-14 18:50:23 (UTC) iota_client::message_interface::message_handler [94mDEBUG[0m Response: Info(NodeInfoWrapper { node_info: InfoResponse { name: "HORNET", version: "2.0.0-rc.2", status: StatusResponse { is_healthy: true, latest_milestone: LatestMilestoneResponse { index: 1527615, timestamp: Some(1665773420), milestone_id: Some("0x7d80e273db5e79f64fdcdbdf0e8a2b3bed3171290c9c209aba068b9f23ec4689") }, confirmed_milestone: ConfirmedMilestoneResponse { index: 1527615, timestamp: Some(1665773420), milestone_id: Some("0x7d80e273db5e79f64fdcdbdf0e8a2b3bed3171290c9c209aba068b9f23ec4689") }, pruning_index: 804042 }, supported_protocol_versions: [2], protocol: ProtocolResponse { version: 2, network_name: "testnet", bech32_hrp: "rms", min_pow_score: 1500, below_max_depth: 15, rent_structure: RentStructureResponse { v_byte_cost: 100, v_byte_factor_key: 10, v_byte_factor_data: 1 }, token_supply: "1450896407249092" }, pending_protocol_parameters: [], base_token: BaseTokenResponse { name: "Shimmer", ticker_symbol: "SMR", unit: "SMR", subunit: Some("glow"), decimals: 6, use_metric_prefix: false }, metrics: MetricsResponse { blocks_per_second: 2.0, referenced_blocks_per_second: 2.0, referenced_rate: 100.0 }, features: [] }, url: "https://api.testnet.shimmer.network" })

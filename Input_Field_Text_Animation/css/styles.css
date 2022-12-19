@@ -1,0 +1,66 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 30px;
+  background: #1d2b3a;
+}
+
+.inputBox {
+  /* border: 1px solid white; */
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;   /* Note 1: ??? */
+  font-size: 1em;
+  color: rgba(255, 255, 255, .25);
+  text-transform: uppercase;
+  transition: 0.1s;
+}
+
+.inputBox input:valid ~ span,   /* Note 2: ??? */ 
+.inputBox input:focus ~ span    /* Note 3: ??? */
+{    
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+
+.inputBox:nth-child(2) input:valid ~ span, 
+.inputBox:nth-child(2) input:focus ~ span {
+  background: #00dfc4;
+  color: #1d2b3a;
+  border-radius: 2px;
+}

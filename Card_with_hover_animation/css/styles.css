@@ -1,0 +1,140 @@
+:root {
+  --clr-neutral-900: #13171b;
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: hsl(142, 90%, 61%);
+}
+
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  background: var(--clr-neutral-900);
+  font-family: sans-serif;
+  /* padding-right: 15em; */
+}
+
+.card {
+  color: var(--clr-neutral-100);
+  background-image: url(/Card_with_hover_animation/image/FZbGd6-WIAAmPkp.jpeg);
+  background-size: cover;
+  border-radius: .2rem;
+  overflow: hidden;
+  padding: 10rem 0 0; /* top left&right bottom */
+  max-width: 35ch;  /* ??? The ch unit is relative to the width of the 0 character */
+
+  transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {  /* ??? something inside the card it's going to scale up */
+  transform: scale(1.05);
+}
+
+.card-content {
+  /* border: 1px solid red; */
+  --padding: 1.5rem;  /* variable exist only within the .card-content */
+  padding: var(--padding);
+  /* border-radius: 4px; */
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  /* transform: translateY(65%); */
+  /* transition: transform 500ms ease; */
+}
+
+.card-title {
+  /* outline: 1px solid red; ??? */
+  width: max-content; /* ??? */
+  position: relative;
+  /* padding: 0 10px; */
+}
+
+.card-title::after {  /* Pseudo element */
+  content: '';
+  position: absolute;
+  height: 3px;
+  left: calc(var(--padding) * -1);  /* invert left with * -1 */
+  bottom: 0;
+  width: calc(100% + var(--padding));
+  background: var(--clr-accent-400);
+  
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+  transform: scaleX(1);
+}
+
+.card-body {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (hover) {
+  .card-content {
+    transform: translateY(65%);
+    transition: transform 500ms ease;  
+  }
+  
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(0%); 
+    transition-delay: 500ms;
+  }
+
+  .card:focus-within .card-content {
+    transition-duration: 0ms; 
+  }
+
+  .card-content > *:not(.card-title) { 
+    opacity: 0;
+    transition: opacity 1000ms linear;
+  }
+
+  .card:hover .card-content > *:not(.card-title),
+  .card:focus-within .card-content > *:not(.card-title) {
+    opacity: 1;
+    transition-delay: 700ms;
+  }
+
+  .card-title::after {
+    transform: scaleX(0);
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
+  padding: 0.2em 1.25em;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--clr-neutral-100);
+  border-radius: .2rem;
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+  }
+} */

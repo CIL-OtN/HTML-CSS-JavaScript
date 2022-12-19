@@ -1,0 +1,42 @@
+:root {
+  --skin-color: #ec1839;
+
+  
+  --background-color: #00121f;
+  --page-bg-color: #00121f;
+  --secondary-background-color: #061a28;
+  --menu-list-color: #8493ad;
+  --primary-foreground-color: #ccc;
+  --secondary-foreground-color: #fff;
+  --primary-subtle-color: #00e0ca;
+  --secondary-subtle-color: #76e2cb;
+  --titles-color: #fff;
+  --link-color: #76e2cb;
+  --primary-border-color: #485776;
+  --secondary-border-color: #0f0f0f;
+  --article-shadow-normal: 0px 4px 10px #09142b;
+  --article-shadow-hover: 0 4px 20px 0 #09142b;
+  --transparent-background-color: rgba(0,0,0,0.99);
+  --footer-background-color: #061a28;
+  --submenu-shadow-color-opacity: 0.55;
+  --button-shadow-color-normal: rgba(10,10,10,0.5);
+  --button-shadow-color-hover: rgba(10,10,10,0.5);
+  --table-background-color-odd: #050505;
+  --table-head-border-bottom: #485776;
+  --toggle-darkmode-button-display-moon: none;
+  --toggle-darkmode-button-display-sun: block;
+  --toggle-darkmode-background-color: rgba(0,0,0,0.5);
+  --header-menu-gradient-first-color: rgba(17,17,17,0);
+  --header-menu-gradient-secound-color: rgba(17,17,17,0.65);
+ 
+
+}
+
+
+/* IOTA Theme Colors */
+
+
+    /* https://blog.shimmer.network/ */
+
+    
+    

@@ -1,0 +1,5 @@
+
+exports.myDateTime = () => {
+
+    return Date();
+}

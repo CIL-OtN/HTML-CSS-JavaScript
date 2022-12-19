@@ -1,0 +1,20 @@
+{
+  "name": "zerotime",
+  "version": "1.0.0",
+  "description": "Definition of time",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node js/index.js"
+  },
+  "author": "Waldemar Schneider",
+  "license": "ISC",
+  "dependencies": {
+    "@iota/client": "^3.0.0-rc.0",
+    "@iota/wallet": "^2.0.3-rc.1",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

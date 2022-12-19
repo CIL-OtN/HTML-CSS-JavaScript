@@ -1,0 +1,90 @@
+.btn a {
+  /* border: 1px solid red; */
+  color: var(--segmentation_border);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--standard-font-size);
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+}
+
+/* ===== Glow Button BEGIN ===== */
+.glow-btn a {
+  position: relative;
+  background: var(--segmentation_border);
+  color: var(--text_block_title);
+  transition: 0.5s;
+}
+
+.glow-btn a:hover {
+  background: var(--skin-color);
+  color: var(--skin-color);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--skin-color);
+}
+
+.glow-btn a:hover {
+  background: var(--skin-color);
+  color: var(--skin-color);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--skin-color);
+}
+
+.glow-btn a:before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: var(--bg_bright);
+}
+
+.glow-btn a span {
+  position: relative;
+  z-index: 1;
+}
+
+.glow-btn a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.glow-btn a i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: var(--bg_bright);
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+.glow-btn a:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.glow-btn a i::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: var(--bg_bright);
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+.glow-btn a:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+/* ===== Glow Button END ===== */
+
+/* ===== Submit Button BEGIN ===== */
+
+/* ===== Submit Button END ===== */
+

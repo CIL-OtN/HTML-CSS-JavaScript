@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+	margin: 0;
+	font-family: 'Comfortaa', cursive;
+	overflow: hidden;
+	background: conic-gradient(at bottom left, deeppink, cyan);
+}
+
+.container {
+	border: 1px solid black;
+	width: 95%;
+	height: 100vh;
+	margin: auto;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.digitalClock {
+	width: fit-content;
+	margin: auto;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.digitalClock h1 {
+	display: inline-block;
+	margin: 0 10px;
+	font-weight: bold;
+	font-size: 3rem;
+}
+
+@media(max-width:768px) {
+	#bar1, #bar2 {
+		display: none;
+	}
+	
+	.digitalClock {
+		text-align: center;
+		width: 100%
+	}
+	
+	.digitalClock h1 {
+		display: block;
+	}
+}
+
+@media(max-width:480px) {
+	.digitalClock h1 {
+		font-size: 2rem;
+	}
+}
