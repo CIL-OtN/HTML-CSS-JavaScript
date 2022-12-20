@@ -308,17 +308,17 @@ select {
 .hero {
   margin-top: 64px;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .shine-hero-block {
   /* border: 1px solid blue; */
+  /* wegen overflow: hidden; im hero oben */
   position: absolute;
   top: 0px;
   left: -10%;
   width: 50%;
   height: 100%;
-  /* z-index: 0; */
 }
 
 .hero .squares_bg {
