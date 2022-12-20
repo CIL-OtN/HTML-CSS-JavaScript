@@ -170,14 +170,13 @@ select {
 }
 
 
-
 /* End: Utility Classes */
 
 
 /* My Portfolio 3.0 */
 .main-container {
   background-color: hsl(var(--container-bg-color));
-  width: min(90%, 83.75rem);
+  width: min(90%, 1340px);
   height: 4000px;
   font-style: normal;
   font-weight: 500;
