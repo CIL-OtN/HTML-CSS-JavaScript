@@ -1,23 +1,43 @@
-/* ===== Start: Nav-Bar  ===== */
+/* ===== Start: Nav-Bar Scroll Up and Down  ===== */
 
-const navbarUPDown = document.querySelector(".navbar");
-const hero = document.querySelector(".hero");
+const navbar = document.querySelector(".navbar");
+const navTogglerBtn = document.querySelector(".nav-toggler");
 
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset; /* chatGPT pageYOffset */
 
-  if (currentScroll > lastScroll) {
-    navbarUPDown.style.top = "-100px";
+  if (currentScroll > lastScroll && window.innerWidth > 770) {
+    navbar.style.top = "-100px";
   } else {
-    navbarUPDown.style.top = "0px";
+    navbar.style.top = "0px";
   }
 
   lastScroll = currentScroll;
 });
 
-/* ===== End: Nav-Bar  ===== */
+navTogglerBtn.addEventListener("click", () => {
+  asideSectionTogglerBtn();
+});
+
+oou
+
+asideSectionTogglerBtn = () => {
+  navbar.classList.toggle("open");
+  navTogglerBtn.classList.toggle("open");
+
+  // nächstes überall klicken dann geht das Menu zu!
+
+  //   for(let i=0; i < allSection.length; i++) {
+  //     allSection[i].classList.toggle("open");
+  //   }
+};
+/* ===== End: Nav-Bar Scroll Up and Down ===== */
+
+/* ===== Aside Open & Close BEGIN ===== */
+
+/* ===== Aside Open & Close END ===== */
 
 /* ===== Start: My-Portfolio Section  ===== */
 const slideItemContainer = document.querySelector(".item-container");
@@ -71,24 +91,3 @@ const gotoNum = (number) => {
 // https://www.mediaevent.de/javascript/arrow-function.html
 
 /* ===== End: My-Portfolio Section  ===== */
-
-/* ===== Aside Open & Close BEGIN ===== */
-const navbar = document.querySelector(".navbar");
-const navTogglerBtn = document.querySelector(".nav-toggler");
-
-navTogglerBtn.addEventListener("click", () => {
-  asideSectionTogglerBtn();
-  // console.log('addEvent löst aus')
-});
-
-asideSectionTogglerBtn = () => {
-  navbar.classList.toggle("open");
-  navTogglerBtn.classList.toggle("open");
-
-  // nächstes überall klicken dann geht das Menu zu!
-
-  //   for(let i=0; i < allSection.length; i++) {
-  //     allSection[i].classList.toggle("open");
-  //   }
-};
-/* ===== Aside Open & Close END ===== */
