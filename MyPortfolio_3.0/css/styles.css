@@ -66,6 +66,7 @@
   margin: 0;
   outline: none;
   text-decoration: none;
+  /* outline: 1px solid red; */
 }
 
 /* Remove default margin */
@@ -200,6 +201,7 @@ select {
   border-bottom: 1px solid hsl(var(--line) / 0.2);
   z-index: 200;
   transition: all 0.4s ease;
+
 }
 
 .navbar .logo {
@@ -799,14 +801,17 @@ textarea {
   .navbar {
     left: -250px;
     width: 250px;
-    height: 100%;
     margin: 0 0;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     padding-inline: 1rem;
     border-right: 1px solid hsl(var(--line) / 0.2);
     border-bottom: 0px;
-    overflow: scroll;
+    /* overflow: scroll; */
+    
+
   }
 
   .navbar.open {

@@ -5,6 +5,13 @@ const navTogglerBtn = document.querySelector(".nav-toggler");
 
 let lastScroll = 0;
 
+navbar.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  return false;
+});
+
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset; /* chatGPT pageYOffset */
 
@@ -20,8 +27,6 @@ window.addEventListener("scroll", () => {
 navTogglerBtn.addEventListener("click", () => {
   asideSectionTogglerBtn();
 });
-
-oou
 
 asideSectionTogglerBtn = () => {
   navbar.classList.toggle("open");
