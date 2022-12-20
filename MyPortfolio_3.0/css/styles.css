@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap");
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"); */
 :root {
   /* Colors */
   --body-bg: 0 0% 12%;
   /* --navbar-bg-color: 360 23% 5%;   */
-  --navbar-bg-color: 216 26% 7%;      /* RGB: 13, 17, 22 Hex: #040506*/
+  --navbar-bg-color: 216 26% 7%; /* RGB: 13, 17, 22 Hex: #040506*/
   --container-bg-color: 210 17% 2%;
   --text-color: 0 0% 80%;
   --line: 0 0% 100%;
 
-  --gold-gradient: 295.38deg, #FFE5A2 4.89%, #BF841A 50.44%, #FFCD74 95.06%;
-
+  --gold-gradient: 295.38deg, #ffe5a2 4.89%, #bf841a 50.44%, #ffcd74 95.06%;
 
   /* font-sizes */
   --fs-500: 2.5rem;
@@ -32,7 +31,7 @@
     --fs-400: 1.8rem;
     --fs-300: 1.6rem;
     --fs-200: 1.2rem;
-    --fs-100: 1rem; 
+    --fs-100: 1rem;
   }
 }
 
@@ -43,7 +42,7 @@
     --fs-400: 2.25rem;
     --fs-300: 2rem;
     --fs-200: 1.2rem;
-    --fs-100: 1rem;  
+    --fs-100: 1rem;
   }
 }
 
@@ -54,10 +53,9 @@
     --fs-400: 1.75rem;
     --fs-300: 1.5rem;
     --fs-200: 1.1rem;
-    --fs-100: 1rem;  
+    --fs-100: 1rem;
   }
 }
-
 
 /* Box sizing rules */
 *,
@@ -85,8 +83,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -108,7 +106,7 @@ body {
   /* background: yellow; */
   display: flex;
   justify-content: center;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   /* font-family: "Roboto Mono"; */
   font-size: 16px;
   /* height: 100vh; */
@@ -137,9 +135,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -156,7 +154,7 @@ select {
   margin-bottom: clamp(1rem, 1.5vw, 3.125rem);
   color: hsl(var(--text-color));
   color: #fcfcfc;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   font-weight: bold;
   font-size: clamp(1.4rem, 1.5vw, 1.6rem);
   text-shadow: 0px 0px 60px #0079f2be;
@@ -169,9 +167,7 @@ select {
   padding: 8px;
 }
 
-
 /* End: Utility Classes */
-
 
 /* My Portfolio 3.0 */
 .main-container {
@@ -187,6 +183,8 @@ select {
 /* ========== Menu Options ========== */
 
 /* ===== Start: Navigationbar ===== */
+
+/* change: height to 4.25 with all its consequencies */
 .navbar {
   position: fixed;
   left: 0;
@@ -194,14 +192,14 @@ select {
   display: flex;
   justify-content: space-between;
   width: min(90%, 83.75rem);
-  height: 5.25rem;
+  height: 64px;    
   padding-inline: 5rem;
   margin: 0 auto;
-  background-color: hsl(var(--navbar-bg-color) / .25);
+  background-color: hsl(var(--navbar-bg-color) / 0.25);
   backdrop-filter: blur(3px);
-  border-bottom: 1px solid hsl(var(--line) / .2);
+  border-bottom: 1px solid hsl(var(--line) / 0.2);
   z-index: 200;
-  transition: all .3s ease;
+  transition: all 0.4s ease;
 }
 
 .navbar .logo {
@@ -239,26 +237,30 @@ select {
   position: absolute;
   top: 100%;
   left: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #BF841A , rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    #bf841a,
+    rgba(0, 0, 0, 0)
+  );
 }
 /* ===== End: Navigationbar ===== */
 
-
 /* ===== Start: Navigation Toggler ===== */
 .nav-toggler {
-  border: 1px solid hsl(var(--line) / .2);
+  border: 1px solid hsl(var(--line) / 0.2);
   height: 40px;
   width: 40px;
   position: fixed;
   top: 25px;
   border-radius: 4px;
-  background-color: hsl(var(--navbar-bg-color) / .25);
+  background-color: hsl(var(--navbar-bg-color) / 0.25);
   cursor: pointer;
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-toggler span {
@@ -267,7 +269,6 @@ select {
   background: linear-gradient(var(--gold-gradient));
   display: inline-block;
   position: relative;
-
 }
 
 .nav-toggler span::before {
@@ -281,9 +282,9 @@ select {
 }
 
 .nav-toggler.open span::before {
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
   top: 0;
- }
+}
 
 .nav-toggler span::after {
   content: "";
@@ -301,10 +302,9 @@ select {
 }
 /* ===== End: Navigation Toggler ===== */
 
-
 /* ===== Start: Hero/Home Section ===== */
 .hero {
-  margin-top: 5.25rem; 
+  margin-top: 64px;
   position: relative;
   /* overflow: hidden; */
 }
@@ -324,7 +324,7 @@ select {
   width: 35%;
   position: absolute;
   top: 0;
-  right: 0; 
+  right: 0;
   padding-right: 1rem;
   padding-top: 1rem;
 }
@@ -336,7 +336,7 @@ select {
 
 .hero .sunglasses_bg img {
   /* border: 1px solid blue; */
-  width: 100%;  
+  width: 100%;
   height: 100%;
 }
 
@@ -359,7 +359,6 @@ select {
   background: -webkit-linear-gradient(var(--gold-gradient));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 .hero-block p {
@@ -370,9 +369,7 @@ select {
 }
 /* ===== End: Hero/Home Section ===== */
 
-
 /* ===== Start: About Me Section  ===== */
-
 
 .about-me .whoami {
   color: hsl(var(--text-color));
@@ -388,12 +385,11 @@ select {
 }
 /* ===== End: About Me Section  ===== */
 
-
 /* ===== Start: My Services Section  ===== */
 .my-services {
-  border-top: 1px solid hsl(var(--line) / .2);
-  border-bottom: 1px solid hsl(var(--line) / .2);
-  background-color: hsl(var(--navbar-bg-color) / .25);
+  border-top: 1px solid hsl(var(--line) / 0.2);
+  border-bottom: 1px solid hsl(var(--line) / 0.2);
+  background-color: hsl(var(--navbar-bg-color) / 0.25);
   display: flex;
   flex-direction: column;
   margin-bottom: clamp(2rem, 2vw, 3.125rem);
@@ -421,13 +417,12 @@ select {
 }
 /* ===== End: My Services Section  ===== */
 
-
 /* ===== Start: My-Profile Section  ===== */
 
 .my-profile {
   /* border: 1px solid rgba(0, 255, 0, 1); */
   /* border-width: thin; */
-  background-color: hsl(var(--navbar-bg-color) / .25);
+  background-color: hsl(var(--navbar-bg-color) / 0.25);
   position: relative;
   /* margin-top: 130px; */
   margin-top: 100px;
@@ -435,7 +430,6 @@ select {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
 
   /* border-inline-start: 1px solid red; */
   /* border-block-start: 1px solid; */
@@ -446,8 +440,6 @@ select {
   /* ); */
 
   /* border: 1px solid red; */
-
-
 }
 
 .my-profile .shine-my-profile {
@@ -467,10 +459,9 @@ select {
   margin-top: 15rem;
   position: relative;
   padding: 3px;
-
 }
 
-  /* 
+/* 
  border-inline-start: 1px solid;
   border-block-start: 1px solid;
   border-image-source: radial-gradient(
@@ -479,11 +470,10 @@ select {
   );
 */
 
-
 .profile-image img {
   /* border: 1px solid green; */
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
 }
 
 .profile-offer {
@@ -520,10 +510,10 @@ select {
 
 .item-container {
   /* border: 1px solid blue; */
-  border-top: 1px solid hsl(var(--line) / .2);
-  border-bottom: 1px solid hsl(var(--line) / .2);
-  background-color: hsl(var(--navbar-bg-color) / .25);
-  position: relative;  
+  border-top: 1px solid hsl(var(--line) / 0.2);
+  border-bottom: 1px solid hsl(var(--line) / 0.2);
+  background-color: hsl(var(--navbar-bg-color) / 0.25);
+  position: relative;
   width: 100%;
   height: 580px;
   top: -5rem;
@@ -544,17 +534,23 @@ select {
 .goldenBox {
   /* border: 1px solid red; */
   width: 150px;
-  height: 100%;  
+  height: 100%;
   padding: 26px;
   margin-bottom: 0rem;
-  background: linear-gradient(130.88deg, rgba(244, 205, 104, 0.2) 0%, #0d0d0d00 30.71%);
+  background: linear-gradient(
+    130.88deg,
+    rgba(244, 205, 104, 0.2) 0%,
+    #0d0d0d00 30.71%
+  );
   background-blend-mode: lighten;
   color: honeydew;
   border-inline-start: 1px solid;
   border-block-start: 1px solid;
   border-image-source: radial-gradient(
-  circle at top left, 
-  #BF841A, transparent 90%);
+    circle at top left,
+    #bf841a,
+    transparent 90%
+  );
   border-image-slice: 1;
 }
 
@@ -568,7 +564,7 @@ select {
   left: 50%;
   transform: translate(-50%, -30%);
   transition: all 300ms ease-in-out;
-  
+
   z-index: -1;
   opacity: 0;
 }
@@ -578,8 +574,7 @@ select {
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-  transition: transform .3s ease;
-
+  transition: transform 0.3s ease;
 }
 
 .item-container .item.active {
@@ -609,7 +604,6 @@ select {
   transform: translate(15%, -30%);
 }
 
-
 .item-container .button-container {
   /* border: 1px solid red; */
   position: absolute;
@@ -634,7 +628,7 @@ select {
   opacity: 1;
 }
 
-.item-container .button-container .button::before {  
+.item-container .button-container .button::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -659,9 +653,9 @@ select {
 
 /* ===== Start: Get-In-Touch Section  ===== */
 .contact-container {
-  border-top: 1px solid hsl(var(--line) / .2);
-  border-bottom: 1px solid hsl(var(--line) / .2);
-  background-color: hsl(var(--navbar-bg-color) / .25);
+  border-top: 1px solid hsl(var(--line) / 0.2);
+  border-bottom: 1px solid hsl(var(--line) / 0.2);
+  background-color: hsl(var(--navbar-bg-color) / 0.25);
   position: relative;
   height: 370px;
   margin-top: 13rem;
@@ -704,16 +698,15 @@ select {
 .contact-formular {
   /* border: 1px solid red; */
   border-radius: 4px;
-  padding-top: .5rem;
-  background-color: hsl(var(--navbar-bg-color) );
-  box-shadow: 0px 1px 15px rgba(255, 229, 163, .35);
+  padding-top: 0.5rem;
+  background-color: hsl(var(--navbar-bg-color));
+  box-shadow: 0px 1px 15px rgba(255, 229, 163, 0.35);
   position: absolute;
   right: calc(25% - 365px);
   bottom: -20px;
   transform: translateX(-50%);
   width: 365px;
   height: 550px;
-  
 }
 
 .inputBox {
@@ -721,13 +714,14 @@ select {
   margin: 1.2rem;
 }
 
-.inputBox input, textarea {
+.inputBox input,
+textarea {
   width: 100%;
   padding: 10px 15px;
   padding-top: 25px;
   border: 0;
-  border-bottom: 1px solid hsl(var(--line) / .25);
-  background-color: hsl(var(--navbar-bg-color));  
+  border-bottom: 1px solid hsl(var(--line) / 0.25);
+  background-color: hsl(var(--navbar-bg-color));
   color: hsl(var(--text-color));
   outline: none;
   font-size: clamp(0.8125rem, 1.5vw, 1rem);
@@ -740,13 +734,12 @@ select {
   padding-top: 0px;
 }
 
-
 .inputBox span {
   /* border: 1px solid red; */
   position: absolute;
   left: 0;
   padding: 15px 30px;
-  pointer-events: none;   
+  pointer-events: none;
   font-size: 0.95em;
   background: -webkit-linear-gradient(var(--gold-gradient));
   -webkit-background-clip: text;
@@ -756,10 +749,10 @@ select {
   transition: 0.1s;
 }
 
-.inputBox input:valid  ~ span, 
-.inputBox textarea:valid ~ span,   
-.inputBox input:focus  ~ span,
-.inputBox textarea:focus  ~ span {    
+.inputBox input:valid ~ span,
+.inputBox textarea:valid ~ span,
+.inputBox input:focus ~ span,
+.inputBox textarea:focus ~ span {
   transform: translateX(10px) translateY(-7px);
   font-size: 0.75em;
   padding: 0px 15px;
@@ -767,10 +760,7 @@ select {
 }
 /* ===== End: Get-In-Touch Section  ===== */
 
-
-
 @media (max-width: 1024px) {
-
   .contact-container {
     margin-top: 25rem;
   }
@@ -784,30 +774,27 @@ select {
     left: 50%;
     transform: translate(-50%, 0%);
   }
-  
+
   .contact-connection {
     top: 500px;
     left: 50%;
     width: 365px;
   }
-
-
 }
 
 @media (max-width: 770px) {
-
   .nav-toggler {
     display: flex;
     left: calc(5% + 20px);
   }
 
   .nav-toggler.open {
-    left: calc(5% + 260px)
+    left: calc(5% + 260px);
   }
 
-  .nav-toggler.open span {  
+  .nav-toggler.open span {
     background: transparent;
-  } 
+  }
 
   .navbar {
     left: -250px;
@@ -817,7 +804,7 @@ select {
     display: flex;
     flex-direction: column;
     padding-inline: 1rem;
-    border-right: 1px solid hsl(var(--line) / .2);
+    border-right: 1px solid hsl(var(--line) / 0.2);
     border-bottom: 0px;
     overflow: scroll;
   }
@@ -841,7 +828,7 @@ select {
   }
 
   .hero {
-    margin-top: 0; 
+    margin-top: 0;
   }
 }
 
@@ -852,7 +839,7 @@ select {
   }
 
   .nav-toggler.open {
-    left: 260px
+    left: 260px;
   }
 
   .navbar.open {
@@ -874,12 +861,10 @@ select {
     width: 35%;
     position: absolute;
     top: 0rem;
-    right: 0rem; 
+    right: 0rem;
     padding-right: 1rem;
     padding-top: 1rem;
   }
-
-
 
   .hero .sunglasses_bg img {
     /* border: 1px solid yellow; */
@@ -889,7 +874,8 @@ select {
   }
 }
 
-@media (max-width: 590px) {   /* Bis 590 herrscht der unten aufgeführte Block */
+@media (max-width: 590px) {
+  /* Bis 590 herrscht der unten aufgeführte Block */
 
   .about-me .title {
     margin-top: calc(65% + 1rem);
@@ -905,63 +891,27 @@ select {
   }
 
   .item-container .item.prev {
-    transform: translate(-90%, -30%)
+    transform: translate(-90%, -30%);
   }
-  
+
   .item-container .item.next {
-    transform: translate(-10%, -30%)
+    transform: translate(-10%, -30%);
   }
 }
 
 @media (max-width: 470px) {
-  
   .item-container .item.prev {
     /* border: 1px solid red; */
-    transform: translate(-70%, -30%)
+    transform: translate(-70%, -30%);
   }
-  
-  .item-container .item.next {
-    transform: translate(-30%, -30%)
-  }
-} 
 
-@media (max-width: 380px) {
-  
+  .item-container .item.next {
+    transform: translate(-30%, -30%);
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 380px) {
+}
 
 .profile-btn {
   margin: 0.5rem 0;
@@ -985,19 +935,19 @@ select {
   letter-spacing: 0.1rem;
   font-weight: 400;
   padding: 5px 20px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .btn-container a:hover {
   background-image: linear-gradient(var(--gold-gradient));
   position: relative;
-  color: #FFCD74;
+  color: #ffcd74;
   letter-spacing: 0.25em;
-  box-shadow: 0 0 10px #FFE5A2;
+  box-shadow: 0 0 10px #ffe5a2;
 }
 
 .btn-container a::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 2px;
   background: #27282c;
@@ -1015,7 +965,7 @@ select {
 }
 
 .btn-container a i::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 80%;
@@ -1023,7 +973,7 @@ select {
   height: 4px;
   background: #27282c;
   transform: translateX(-50%) skewX(325deg);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .btn-container a:hover i::before {
@@ -1032,7 +982,7 @@ select {
 }
 
 .btn-container a i::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 20%;
@@ -1040,24 +990,13 @@ select {
   height: 4px;
   background: #27282c;
   transform: translateX(-50%) skewX(325deg);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .btn-container a:hover i::after {
   width: 20px;
   left: 80%;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* 
 
@@ -1091,14 +1030,3 @@ h1 {
 
 
 */
-
-
-
-
-
-
-
-
-
-
-
