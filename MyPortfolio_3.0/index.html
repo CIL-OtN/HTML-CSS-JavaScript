@@ -20,18 +20,14 @@
 
       1. Ersetze alten Title code mit neuem Title code als block abschnitt
 
-      3. wenn man device navbarfläche außerhalb berührt sei mit mouseclick oder touch soll es links verschwinden
-
-      4. Im hero den scheint overflow verbergen damit es nur dem Text als hintergrund dient. 
-
-      6. Menu links zum scrollen der zugehörigen Sectionen!
-
-      7. aber @media 590px ist .hero .herob-block zu weit vom unteren title entfernt
-
       8. Füge für alle Eventualitäten einen scrollbalken im Menu ein, sobald window size in Y Richtung kleiner wird.
 
       9. contact formular farbe anpassen
-          -->
+
+      10. Check mal im Handy ob das Logo mit den Menupunkten an der selben Stelle verbleiben
+          
+      11. Bei HTML CSS JS und Figma die linie dahinter verbergen
+    -->
     <title>Portfolio 3.0</title>
   </head>
   <body>
@@ -53,6 +49,9 @@
           <a href="#about"></i>About</a>
         </li>
         <li id="nav-elem">
+          <a href="#myservice"></i>Service</a>
+        </li>
+        <li id="nav-elem">
           <a href="#projects"></i>Projects</a>
         </li>
         <li id="nav-elem">
@@ -65,7 +64,34 @@
 
     <div class="main-container">
 
-      <div class="hero">
+      
+      
+      
+      
+      
+      <!-- New Hero Start -->
+
+      <section class="container hero row">
+        <div class="content">
+          <h1>Choose your style</h1>
+          <p>Find out more style that suits you by event</p>
+          <a href="#" class="row">Read the last articles about sneakers.</a>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- New Hero End -->
+
+      
+
+
+
+
+
+      <div class="hero" id="home">
         <!-- <div class="shine-hero-block">
           <img src="./image/Eclipse_1.svg" alt="">
         </div> -->
@@ -73,7 +99,7 @@
           <p>May I introduce Myself ...</p>
             <div class="hero-name">Waldemar <span>Schneider</span></div>
           <p>
-            The programer & Graphic Designer behind codeinventorslab.com! 
+            The Programer & Web Designer behind codeinventorslab.com. 
             With Experience in Delievering End-To-End UX/UI Design
             for Software Products.
           </p>
@@ -91,23 +117,34 @@
       
       <!-- <hr style="margin-top: 100px;"> -->
   
-      <div class="about-me">
+      <div class="about-me" id="about">
         <div class="title">About Me</div>
         <div class="whoami">
           <p>
-          I'm 35 years old and live in Allgäu Bavaria.<br><br>
           Front-end developer and UI Designer who is passionate about interfaces from their
-          creation to development. I like to learn more and more about the area, challenges
-          that take me out of my comfort zone are the best.<br><br>
-          I have prototyped and developed Landing Pages, Sites, E-Commerces, 
-          E-Mails marketing, Apps and Programs.
-          </p>
-        </div>
+          creation to development. In my work, I combine my knowledge of user experience and user 
+          interface design with my web development skills to create user-friendly and engaging websites. 
+          I have in-depth knowledge of HTML, CSS, JavaScript and am very familiar with the Figma design tool.
+          <br><br>
+          I also enjoy working in a team and am willing to take on new challenges and step out of 
+          my comfortable zone to further develop myself.
+          
+        </p>
       </div>
+    </div>
+    
+    <!--     
+    I like to learn more and more about the area, challenges
+    that take me out of my comfort zone are the best. 
+    -->
+
+    <!--  I enjoy solving complex problems in an intuitive and elegant way, with this I always
+          strive to provide the best possible experience for website and application users.  
+    -->
+    
+    <!-- <hr style="margin-top: 100px;"> -->
       
-      <!-- <hr style="margin-top: 100px;"> -->
-      
-      <div class="my-services">
+      <div class="my-services" id="myservice">
         <div class="title">My Services</div>
           
           <div class="service-container">
@@ -156,7 +193,7 @@
       </div>
 
       <!-- <hr style="margin-top: 100px; border: 1px solid red"> -->
-      <div class="my-portfolio">
+      <div class="my-portfolio" id="projects">
         <div class="title">My Portfolio</div>
 
         <div class="goldenBox-container">
@@ -200,7 +237,7 @@
 
       </div>
 
-      <div class="contact-container">
+      <div class="contact-container" id="contact">
         
         <div class="contact-inner-container">
 

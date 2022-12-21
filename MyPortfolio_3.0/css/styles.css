@@ -1,30 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap");
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"); */
 :root {
-  /* Colors */
-
-  --body-bg: 31, 31, 31;
+  /* colors */
+  --body-bg-color: 31, 31, 31;
   --container-bg-color: 4, 5, 6;  
   --navbar-bg-color: 13, 17, 22; 
   --segment-bg-color: 33, 35, 47;
 
   --text-color: 244, 248, 250;
   --line: 255, 255, 255;
-
   --gold-gradient: 295.38deg, #ffe5a2 4.89%, #bf841a 50.44%, #ffcd74 95.06%;
 
+  /* font sizes */
   --hero-name-size: 2rem;
   --title-size: 1.5rem;
   --text-size: 1rem;
 
-  /* font-sizes */
-  --fs-500: 2.5rem;
-  --fs-400: 2rem;
-  --fs-300: 1.6rem;
-  --fs-200: 1.2rem;
-  --fs-100: 1rem;
 
-  /* font-families */
+  --size-h1: 2rem;
+  --size-h2: 1.75rem;
+  --size-h3: 1.5rem;
+  --size-h4: 1.25rem;
+  --size-h5: 1rem;
+
+  /* font families */
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
@@ -76,13 +75,12 @@ body {
   /* min-height: 100vh; */
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: rgba(var(--body-bg), 1);
+  background-color: rgba(var(--body-bg-color), 1);
   /* background: yellow; */
   display: flex;
   justify-content: center;
   font-family: "Montserrat";
-  /* font-family: "Roboto Mono"; */
-  font-size: 16px;
+  font-size: var(--text-size);
   /* height: 100vh; */
 }
 
@@ -124,7 +122,7 @@ select {
 
 /* Start: Utility Classes */
 .title {
-  font-size: var(--title-size);
+  font-size: var(--size-h3);
   margin: 3rem 0;
   padding: 1rem;
   color: rgba(var(--text-color), 1);
@@ -145,7 +143,6 @@ select {
   height: 4000px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.25rem;
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 1);
 }
 
@@ -178,7 +175,7 @@ select {
 }
 
 .navbar .logo a {
-  font-size: 1.6rem;
+  font-size: var(--size-h1);
   text-decoration: none;
   color: rgba(var(--text-color), 1);
 }
@@ -322,9 +319,7 @@ select {
 }
 
 .hero-name {
-  line-height: 1;
-  /* font-size: clamp(1.48px, 3vw, 3rem); */
-  font-size: var(--hero-name-size);
+  font-size: var(--size-h1);
   margin-bottom: 1vh;
   background: -webkit-linear-gradient(var(--gold-gradient));
   -webkit-background-clip: text;
@@ -332,24 +327,22 @@ select {
 }
 
 .hero-block p {
-  line-height: 1.5;
-  /* font-size: clamp(16px, 1.5vw, 1.3rem); */
+  font-size: var(--text-size);
   margin-bottom: 1vh;
-  letter-spacing: 0.0625rem;
+  letter-spacing: 0.1rem;
 }
 /* ===== End: Hero/Home Section ===== */
 
 /* ===== Start: About Me Section  ===== */
 
 .about-me .whoami {
+  border: 1px solid green;
   color: rgba(var(--text-color), 1);
-  letter-spacing: 1px;
-  line-height: 1.5;
-  /* text-align: center; */
-  width: 95%;
+  letter-spacing: 0.1rem;
+  width: 65%;
   margin: auto;
-  padding: 1rem;
-  margin-bottom: clamp(3rem, 2vw, 3.125rem);
+  /* padding: 1rem; */
+  margin-bottom: 3rem;
 }
 /* ===== End: About Me Section  ===== */
 
@@ -384,7 +377,7 @@ select {
   padding: 1rem;
   width: 80%;
   margin: 2rem 2rem 0.5rem 2rem;
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-size: var(--size-h5);
 }
 /* ===== End: My Services Section  ===== */
 
@@ -453,25 +446,25 @@ select {
 }
 
 .profile-offer .profile-header {
+  border: 1px solid green;
   background: -webkit-linear-gradient(var(--gold-gradient));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   height: 5rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: clamp(1.4rem, 2.7vw, 2.7rem);
+  font-size: var(--size-h3);
   padding-top: 2.5rem;
 }
 
 .profile-offer .profile-text {
-  border: 1px solid red;
+  border: 1px solid green;
   color: rgba(var(--text-color), 1);
 
   text-transform: uppercase;
   text-align: center;
   padding: 2rem 1.5rem;
-  font-size: clamp(1.3rem, 1.5vw, 1.3rem);
-  line-height: 1.8;
+  font-size: var(--size-h5);
 }
 /* ===== End: My-Profile Section  ===== */
 
@@ -588,7 +581,7 @@ select {
 
 .item-container .button-container .button {
   color: rgba(var(--text-color), 1);
-  font-size: 20px;
+  font-size: var(--size-h4);
   cursor: pointer;
   padding: 5px;
   position: relative;
@@ -635,17 +628,16 @@ select {
 
 .contact-motivation {
   /* border: 1px solid green; */
-
-  color: rgba(var(--text-color), 1);
-
   position: absolute;
-  top: -160px;
+  top: -230px;
   left: 25%;
   transform: translate(-50%, 0%);
-  width: 365px;
+  width: 465px;
   padding: 16px;
-  line-height: 1.5;
+  font-size: var(--size-h4);
   letter-spacing: 0.1em;
+  color: rgba(var(--text-color), 1);
+  text-align: center;
 }
 
 .contact-container span {
@@ -656,7 +648,7 @@ select {
 }
 
 .contact-connection {
-  /* border: 1px solid blue; */
+  border: 1px solid green;
   padding-left: 16px;
   color: rgba(var(--text-color), 1);
   position: absolute;
@@ -665,7 +657,6 @@ select {
   transform: translate(-50%, -50%);
   width: 365px;
   padding: 16px;
-  line-height: 2.5;
   letter-spacing: 0.1em;
 }
 
@@ -699,7 +690,7 @@ textarea {
   background-color: rgba(var(--segment-bg-color), 0.2);
   color: rgba(var(--text-color), 1);
   outline: none;
-  font-size: clamp(0.8125rem, 1.5vw, 1rem);
+  font-size: var(--text-size);
   font-weight: 500;
   letter-spacing: 0.1em;
   transition: 0.5s;
@@ -715,7 +706,7 @@ textarea {
   left: 0;
   padding: 15px 30px;
   pointer-events: none;
-  font-size: 0.95em;
+  font-size: 0.75em;
   background: -webkit-linear-gradient(var(--gold-gradient));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -745,7 +736,7 @@ textarea {
   }
 
   .contact-motivation {
-    top: -350px;
+    top: -430px;
     left: 50%;
     transform: translate(-50%, 0%);
   }
@@ -903,7 +894,7 @@ textarea {
 
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: var(--text-size);
   letter-spacing: 0.1rem;
   font-weight: 400;
   padding: 5px 20px;
@@ -914,7 +905,6 @@ textarea {
   background-image: linear-gradient(var(--gold-gradient));
   position: relative;
   color: #ffcd74;
-  letter-spacing: 0.25em;
   box-shadow: 0 0 10px #ffe5a2;
 }
 
@@ -971,3 +961,4 @@ textarea {
 }
 
 
+/* New Hero */

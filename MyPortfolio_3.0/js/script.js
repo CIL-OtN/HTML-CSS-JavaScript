@@ -2,9 +2,11 @@
 
 const navbar = document.querySelector(".navbar");
 const navTogglerBtn = document.querySelector(".nav-toggler");
+const mainContainer = document.querySelector(".main-container");
 
 let lastScroll = 0;
 
+// Verbiete die Fähigkeit innerhalb der Navigationsleiste die ganze Seite zu auf und ab zu scrollen
 navbar.addEventListener("wheel", (e) => {
   e.preventDefault();
   e.stopPropagation();
@@ -12,6 +14,7 @@ navbar.addEventListener("wheel", (e) => {
   return false;
 });
 
+// Beim auf und ab scrollen erscheint oder verschwindet die Navigationsleiste ab window.size 770px
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset; /* chatGPT pageYOffset */
 
@@ -24,25 +27,23 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
+// Toggle den Button der die Navigationsleiste öffnet und schließt
 navTogglerBtn.addEventListener("click", () => {
   asideSectionTogglerBtn();
 });
 
+// Bei mouseclick außerhabl von der Navigationsleiste, schiebe es zurück
+mainContainer.addEventListener("click", () => {
+  navbar.classList.remove("open");
+  navTogglerBtn.classList.remove("open");
+});
+
+// Toggle die Navigationsleiste
 asideSectionTogglerBtn = () => {
   navbar.classList.toggle("open");
   navTogglerBtn.classList.toggle("open");
-
-  // nächstes überall klicken dann geht das Menu zu!
-
-  //   for(let i=0; i < allSection.length; i++) {
-  //     allSection[i].classList.toggle("open");
-  //   }
 };
 /* ===== End: Nav-Bar Scroll Up and Down ===== */
-
-/* ===== Aside Open & Close BEGIN ===== */
-
-/* ===== Aside Open & Close END ===== */
 
 /* ===== Start: My-Portfolio Section  ===== */
 const slideItemContainer = document.querySelector(".item-container");
@@ -96,3 +97,5 @@ const gotoNum = (number) => {
 // https://www.mediaevent.de/javascript/arrow-function.html
 
 /* ===== End: My-Portfolio Section  ===== */
+
+
