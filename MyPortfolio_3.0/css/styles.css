@@ -5,7 +5,7 @@
   --body-bg-color: 31, 31, 31;
   --container-bg-color: 4, 5, 6;  
   --navbar-bg-color: 13, 17, 22; 
-  --segment-bg-color: 33, 35, 47;
+  --segment-bg-color: 3, 35, 47;
 
   --text-color: 244, 248, 250;
   --line: 255, 255, 255;
@@ -72,15 +72,16 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: rgba(var(--body-bg-color), 1);
-  /* background: yellow; */
   display: flex;
   justify-content: center;
   font-family: "Montserrat";
   font-size: var(--text-size);
+
+
   /* height: 100vh; */
 }
 
@@ -140,7 +141,8 @@ select {
 .main-container {
   background-color: rgba(var(--container-bg-color), 1);
   width: min(90%, 1340px);
-  height: 4000px;
+  height: 4300px;
+
   font-style: normal;
   font-weight: 500;
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 1);
@@ -157,7 +159,7 @@ select {
   right: 0;
   display: flex;
   justify-content: space-between;
-  width: min(90%, 83.75rem);
+  width: min(90%, 1340px);
   height: 64px;
   padding-inline: 5rem;
   margin: 0 auto;
@@ -270,19 +272,12 @@ select {
 
 /* ===== Start: Hero/Home Section ===== */
 .hero {
-  margin-top: 64px;
+  /* border: 1px solid red; */
   position: relative;
+  margin-top: 64px;
+  box-sizing: inherit;
   /* overflow: hidden; */
-}
-
-.shine-hero-block {
-  /* border: 1px solid blue; */
-  /* wegen overflow: hidden; im hero oben */
-  position: absolute;
-  top: 0px;
-  left: -10%;
-  width: 50%;
-  height: 100%;
+  
 }
 
 .hero .squares_bg {
@@ -296,6 +291,7 @@ select {
 }
 
 .hero .sunglasses_bg {
+  background-size: cover;
   position: relative;
   height: 100%;
 }
@@ -308,11 +304,13 @@ select {
 
 .hero-block {
   /* border: 1px solid yellow; */
-  width: 45%;
+  width: 35%;
   position: absolute;
-  top: 65%;
-  left: 4%;
-  /* padding-inline: 2rem; */
+  top: 15%;
+  top: 200px;
+  left: 6%;
+  padding-inline: 2rem;
+  transform: translateY(-50%);
   transform: translateY(-50%);
   color: rgba(var(--text-color), 1);  
   z-index: 1;
@@ -336,7 +334,7 @@ select {
 /* ===== Start: About Me Section  ===== */
 
 .about-me .whoami {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   color: rgba(var(--text-color), 1);
   letter-spacing: 0.1rem;
   width: 65%;
@@ -348,62 +346,54 @@ select {
 
 /* ===== Start: My Services Section  ===== */
 .my-services {
+  border: 1px solid green;
+
   border-top: 1px solid rgba(var(--line), 0.2);
   border-bottom: 1px solid rgba(var(--line), 0.2);
   background-color: rgba(var(--segment-bg-color), 0.2);
-  /* background-color: yellow; */
-
   display: flex;
-  flex-direction: column;
-  margin-bottom: clamp(2rem, 2vw, 3.125rem);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /*!!!*/
+  flex-wrap: wrap; /*!!!*/
+  margin-bottom: 3rem;
+
 }
 
 .service-container {
   border: 1px solid red;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: clamp(2rem, 4vw, 4.125rem);
 }
 
-.service-block {
-  /* border: 1px solid blue; */
-  width: 24rem;
-}
 
-.service-description {
-  color: rgba(var(--text-color), 1);
-  padding: 1rem;
-  width: 80%;
-  margin: 2rem 2rem 0.5rem 2rem;
-  font-size: var(--size-h5);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== End: My Services Section  ===== */
 
 /* ===== Start: My-Profile Section  ===== */
 
 .my-profile {
-  /* border: 1px solid rgba(0, 255, 0, 1); */
-  /* border-width: thin; */
   background-color: rgba(var(--segment-bg-color), 0.2);
   position: relative;
-  /* margin-top: 130px; */
   margin-top: 100px;
-  /* height: 10rem; */
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
-  /* border-inline-start: 1px solid red; */
-  /* border-block-start: 1px solid; */
-
-  /* border-image-source: radial-gradient( */
-  /* circle at top left,  */
-  /* #BF841A, transparent 50% */
-  /* ); */
-
-  /* border: 1px solid red; */
 }
 
 .my-profile .shine-my-profile {
@@ -418,7 +408,8 @@ select {
 
 .profile-image {
   /* border: 1px solid rgba(255, 0, 0, 0.5); */
-  width: clamp(300px, 40vw, 400px);
+  width: 400px;
+  height: auto;
   margin: 0 1rem;
   margin-top: 15rem;
   position: relative;
@@ -441,12 +432,14 @@ select {
 }
 
 .profile-offer {
-  width: clamp(400px, 50vw, 500px);
-  margin-bottom: 2rem;
+  /* border: 1px solid blue; */
+  /* width: clamp(400px, 50vw, 500px); */
+  width: 450px;
+  /* margin-bottom: 2rem; */
 }
 
 .profile-offer .profile-header {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   background: -webkit-linear-gradient(var(--gold-gradient));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -458,13 +451,13 @@ select {
 }
 
 .profile-offer .profile-text {
-  border: 1px solid green;
+  border-bottom: 1px solid rgba(var(--line), 0.2);
   color: rgba(var(--text-color), 1);
 
-  text-transform: uppercase;
-  text-align: center;
+  /* text-align: center; */
   padding: 2rem 1.5rem;
-  font-size: var(--size-h5);
+  font-size: var(--text-size);
+  letter-spacing: 0.1em;
 }
 /* ===== End: My-Profile Section  ===== */
 
@@ -476,7 +469,7 @@ select {
 
 .item-container {
   /* border: 1px solid blue; */
-  border-top: 1px solid rgba(var(--line), 0.2);
+  /* border-top: 1px solid rgba(var(--line), 0.2); */
   border-bottom: 1px solid rgba(var(--line), 0.2);
   background-color: rgba(var(--segment-bg-color), 0.2);
   position: relative;
@@ -648,7 +641,7 @@ select {
 }
 
 .contact-connection {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   padding-left: 16px;
   color: rgba(var(--text-color), 1);
   position: absolute;
@@ -671,17 +664,18 @@ select {
   bottom: -20px;
   transform: translateX(-50%);
   width: 365px;
-  height: 550px;
+  height: 570px;
+  backdrop-filter: blur(50px);
   z-index: 3;
 }
 
 .inputBox {
-  /* border: 1px solid black; */
   margin: 1.2rem;
 }
 
 .inputBox input,
 textarea {
+  border: 1px solid;
   width: 100%;
   padding: 10px 15px;
   padding-top: 25px;
@@ -697,7 +691,7 @@ textarea {
 }
 
 .inputBox textarea {
-  padding-top: 0px;
+  padding-top: 8px;
 }
 
 .inputBox span {
@@ -715,6 +709,7 @@ textarea {
   transition: 0.1s;
 }
 
+
 .inputBox input:valid ~ span,
 .inputBox textarea:valid ~ span,
 .inputBox input:focus ~ span,
@@ -727,6 +722,7 @@ textarea {
 /* ===== End: Get-In-Touch Section  ===== */
 
 @media (max-width: 1024px) {
+
   .contact-container {
     margin-top: 25rem;
   }
@@ -788,6 +784,7 @@ textarea {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+    text-align: center;
   }
 
   .navbar .nav li {
@@ -814,8 +811,9 @@ textarea {
   }
 
   .main-container {
-    /* border: 1px solid yellow;  */
-    width: min(100%, 1340px);
+    /* border: 1px solid blue;  */
+    /* change width: min(100%, 1340px); */ 
+    width: 100%;
   }
 
   .hero .squares_bg {
@@ -875,8 +873,13 @@ textarea {
 @media (max-width: 380px) {
 }
 
+
+
+
+
+/* Button Gold Shimmer */
 .profile-btn {
-  margin: 0.5rem 0;
+  margin: 2.5rem 0;
 }
 
 .btn-container {
@@ -890,10 +893,10 @@ textarea {
   /* border: 1px solid red; */
   position: relative;
   background: rgba(var(--text-color), 1);
-  color: rgba(var(--text-color), 1);
+  color: rgba(var(--text-color), 1); 
 
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: var(--text-size);
   letter-spacing: 0.1rem;
   font-weight: 400;
@@ -916,6 +919,7 @@ textarea {
 }
 
 .btn-container a span {
+  color: rgba(var(--text-color), 1);
   position: relative;
   z-index: 1;
 }
@@ -961,4 +965,77 @@ textarea {
 }
 
 
-/* New Hero */
+
+
+
+
+
+
+
+
+
+
+/* new hero */
+/* .hero2 {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text-container {
+  width: 60%;
+  padding: 0 20px;
+  color: white;
+}
+
+.hero-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.hero-button:hover {
+  background-color: #444;
+}
+
+.hero2 .hero-image-container {
+  margin: 1rem;
+  width: 100%;
+}
+
+.hero-image {
+  border: 1px solid green;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .hero2 {
+    flex-direction: column;
+  }
+
+  .hero-text-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image-container {
+    width: 70%;
+    margin-top: 20px;
+  }
+} */
+

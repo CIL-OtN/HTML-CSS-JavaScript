@@ -8,25 +8,34 @@
     rel="stylesheet"
     href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- https://fontawesome.com/icons/arrow-left?s=solid&f=classic -->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="#">   <!-- to avoid favicon errror -->
+    <!-- https://fontawesome.com/icons/arrow-left?s=solid&f=classic -->
 
     <!-- 
+
+      1. Hero komplett NEU programmieren!!!!!!!
 
       1. Ersetze alten Title code mit neuem Title code als block abschnitt
 
       8. Füge für alle Eventualitäten einen scrollbalken im Menu ein, sobald window size in Y Richtung kleiner wird.
 
-      9. contact formular farbe anpassen
-
       10. Check mal im Handy ob das Logo mit den Menupunkten an der selben Stelle verbleiben
           
       11. Bei HTML CSS JS und Figma die linie dahinter verbergen
+
+      12. Siehe dir noch mal die Buttons an, die sind unterschiedlich!
+          A: Das Problem liegt im contact-container mit color gold-gradient für Span!
+          Bei Zeit und Laune sollte es besser korrigiert werden!
+
+      13. Nachdem ein Menüpunkt geklickt worden ist, soll das Seitenmenü verschwinden!
+    
+      
+    
     -->
     <title>Portfolio 3.0</title>
   </head>
@@ -42,9 +51,11 @@
         <a href="#"><span></span>CIL</a>
       </div>
       <ul class="nav">
-        <li id="nav-elem">
-          <a href="#home" class="active"></i>Home</a>
-        </li>
+        
+        <!-- Below is an example of how to use icons -->
+        <!-- <li id="nav-elem"><a href="#home"></i><i class="fa fa-home"></i>Home</a></li> -->
+        <li id="nav-elem"><a href="#home"></i>Home</a></li>
+                
         <li id="nav-elem">
           <a href="#about"></i>About</a>
         </li>
@@ -64,37 +75,7 @@
 
     <div class="main-container">
 
-      
-      
-      
-      
-      
-      <!-- New Hero Start -->
-
-      <section class="container hero row">
-        <div class="content">
-          <h1>Choose your style</h1>
-          <p>Find out more style that suits you by event</p>
-          <a href="#" class="row">Read the last articles about sneakers.</a>
-        </div>
-      </section>
-
-
-
-
-
-      <!-- New Hero End -->
-
-      
-
-
-
-
-
       <div class="hero" id="home">
-        <!-- <div class="shine-hero-block">
-          <img src="./image/Eclipse_1.svg" alt="">
-        </div> -->
         <div class="hero-block">
           <p>May I introduce Myself ...</p>
             <div class="hero-name">Waldemar <span>Schneider</span></div>
@@ -105,12 +86,10 @@
           </p>
         </div>
           <div class="squares_bg">
-            <!-- <img src="/MyPortfolio_3.0/image/image_background_squares.png" alt="">           -->
             <img src="./image/image_background_squares.png" alt="">          
           
           </div> 
           <div class="sunglasses_bg">
-            <!-- <img src="/MyPortfolio_3.0/image/me_in_sunglasses_hero.png" alt="">           -->
             <img src="./image/me_in_sunglasses_hero.png" alt="">          
         </div>
       </div>
@@ -146,24 +125,39 @@
       
       <div class="my-services" id="myservice">
         <div class="title">My Services</div>
-          
+
           <div class="service-container">
-            <div class="service-block">
-              <div class="service-description">
-                <p>HTML, CSS, JS Customization</p>
-              </div>
-              <div class="service-description">
-                <p>UI Design</p>   
-              </div>
-            </div>
-            <div class="service-block">
-              <div class="service-description">
-                <p>Shopify Customization</p>
-              </div>
-              <div class="service-description">
-                <p>Web Development</p>
-              </div>
-            </div>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
           </div>    
       </div>
 
@@ -179,16 +173,28 @@
           </div>
           <div class="profile-offer">
             <div class="profile-header">
-              Example Heading
+              Waldemar Schneider
             </div>  
             <div class="profile-text" >
-              Over 10 Year of experience for my customers
+              As a web developer at codeinventorslab.com, I'm specialized in developing user-friendly 
+              websites and applications for the Internet of Things (IoT). With my expertise in embedded 
+              Linux, I ensure that my solutions are reliable and secure. 
+              From conception to implementation, I focus on quality and innovation to achieve 
+              the goals I set for myself.
             </div>
+            
+            <!-- <div class="profile-btn">
+              <div class="btn-container">
+                <a href="#" ><span>Get In Touch</span><i></i></a>
+              </div>
+            </div> -->
+
             <div class="profile-btn">
               <div class="btn-container">
-                <a href="#" ><span>Hire Me</span><i></i></a>
+                <a href="#" ><span>Get In Touch</span><i></i></a>
               </div>
             </div>
+
           </div>
       </div>
 
@@ -219,24 +225,20 @@
           <div class="item prev">
             <img src="./image/steam_5.png" alt="">
           </div>
-          <!-- Erweitere hier auf weitere Items -->
-          <!-- <div class="item prev">
-            <img src="./image/steam_6.png" alt="">
-          </div> -->
-
+        
           <div class="button-container">
             <div class="button"><i class="fa-solid fa-arrow-left"></i></div>
             <div class="button"><i class="fa-solid fa-arrow-right"></i></div>
           </div>
-        
-          
-        
         </div>
 
 
 
       </div>
 
+      <!-- hier weiter -->
+      
+      
       <div class="contact-container" id="contact">
         
         <div class="contact-inner-container">
@@ -246,13 +248,13 @@
             things more visual or conceptful?
             <span>Just Say Hello!</span>
           </div>
-
+          
           <div class="contact-connection">
             <ul>
               <li>info@codeinventorslab.com</li>
-              <li>a</li>
-              <li>b</li>
-              <li>c</li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
           </div>
           
@@ -274,14 +276,16 @@
               <form>
               <textarea placeholder="Your request..." type="text" rows="8" cols="50" required="required"></textarea>
               </form>
+
+              
               <div class="profile-btn" style="margin-top: 2.5rem;">
                 <div class="btn-container">
                   <a href="#" ><span>Submit</span><i></i></a>
                 </div>
               </div>
+              
+            </div>
           </div>
-          
-        </div>
 
       </div>
 
@@ -297,3 +301,63 @@
   </body>
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- New Hero Start -->
+
+      <!-- <div class="hero2" id="home">
+        
+        <div class="hero-text-container">
+          <h1 class="hero-title">Willkommen auf unserer Website</h1>
+          <p class="hero-description">Hier finden Sie alle Informationen über unsere Dienstleistungen und Produkte.</p>
+          <button class="hero-button">Mehr erfahren</button>
+        </div>
+        
+        <div class="hero-image-container">
+          <img src="./image/me_in_sunglasses_hero.png" alt="Hero Image" class="hero-image">
+        </div>
+      
+      </div> -->
+      
+      <!-- New Hero End -->
+
+      
