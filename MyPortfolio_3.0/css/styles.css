@@ -346,40 +346,157 @@ select {
 
 /* ===== Start: My Services Section  ===== */
 .my-services {
-  border: 1px solid green;
+  /* border: 1px solid green; */
 
   border-top: 1px solid rgba(var(--line), 0.2);
   border-bottom: 1px solid rgba(var(--line), 0.2);
   background-color: rgba(var(--segment-bg-color), 0.2);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; /*!!!*/
-  flex-wrap: wrap; /*!!!*/
+  flex-direction: column;
+  /* height: auto; */
+  /* height: 50rem; */
   margin-bottom: 3rem;
-
 }
+
+/* How to Use the Background Attachment Property */
+/* https://www.freecodecamp.org/news/css-background-image-with-html-example-code/ */
 
 .service-container {
-  border: 1px solid red;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  /* height: auto; */
+  height: 100%;
+  /* width: 100%; */
 }
 
+.service-card {
+  position: relative;
+  /* border: 1px solid red; */
+  color: rgba(var(--text-color), 1);
+  /* url bg-image nimmt sich nicht automatisch genügend Platz ein  */
+  /* background-image: url(/HTML_CSS_JS/MyPortfolio_3.0/image/steam_1.png); */
+  /* background-size: cover; */
+  /* object-fit: cover; */
+  overflow: hidden;
+  /* padding: 20rem 0 0; */
+   /* Anzupassen je nach Bildgröße! */
+  width: 300px;
+  height: 420px;
 
+  transition: transform 500ms ease;
+}
 
+.service-card img {
+  position: absolute;
+  object-fit: cover;
+  
+  width: 100%;
+  height: 100%;
 
+  /* z-index: -1; */
+}
 
+.service-card:hover, .service-card:focus-within { /* ??? within funktioniert nicht! */
+  transform: scale(1.05);
+}
 
+.service-card-content {
+  /* border: 1px solid green; */
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),   /*??? zu rgba ändern !*/
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  font-size: 1rem;
 
+  /* z-index: 200; */
+  /* transform: translateY(10%); */
+  /* transition: transform 500ms ease; */
+}
 
+.service-card-title {
+  /* border: 1px solid red; */
+  /* width: max-content; ???*/
+  position: relative;
+  font-size: var(--size-h4);
+}
 
+.service-card-title::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  left: calc(var(--padding) * -1);
+  bottom: 0;  
+  width: calc(100% + var(--padding));
+  background-color: #bf841a;
+  transform-origin: left; /*???*/
+  transition: transform 500ms ease;
+}
 
+.service-card:hover .service-card-title::after,
+.service-card:focus-within .service-card-title::after {
+  transform: scale(1);
+}
 
+.service-card-body {
+  padding-top: 1rem;
+  color: rgba(var(--text-color), 0.9);
+}
 
+@media(hover) {
 
+  .service-card-content {
+    transform: translateY(125%);
+    transition: transform 500ms ease;
+  }
 
+  .service-card:hover .service-card-content,
+  .service-card:focus-within .service-card-content {
+    transform: translateY(50%);
+    transition-delay: 500ms;
+  }
 
+  .service-card:focus-within .service-card-content {
+    transition-duration: 0ms;
+  }
 
+  .service-card-content > *:not(.service-card-title) {
+    opacity: 0;
+    transition: opacity 900ms linear;
+  }
 
+  .service-card:hover .service-card-content > *:not(.service-card-title),
+  .service-card:focus-within .service-card-content > *:not(.service-card-title) {
+    opacity: 1;
+    transition-delay: 700ms;
+  }
+
+  .service-card-title::after {
+    transform: scaleX(0);
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(var(--text-color), 1);
+  background-color: green;
+  padding: 0.3rem 1rem;
+  margin-top: 12px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: mediumaquamarine;
+  border-radius: .2rem;
+}
 
 
 
@@ -701,7 +818,7 @@ textarea {
   padding: 15px 30px;
   pointer-events: none;
   font-size: 0.75em;
-  background: -webkit-linear-gradient(var(--gold-gradient));
+  /* background: -webkit-linear-gradient(var(--gold-gradient)); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
