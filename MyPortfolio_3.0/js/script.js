@@ -1,18 +1,31 @@
 /* ===== Start: Nav-Bar Scroll Up and Down  ===== */
 
 const navbar = document.querySelector(".navbar");
+const navElems = document.querySelectorAll(".nav li a");
 const navTogglerBtn = document.querySelector(".nav-toggler");
 const mainContainer = document.querySelector(".main-container");
 
 let lastScroll = 0;
 
-// Verbiete die Fähigkeit innerhalb der Navigationsleiste die ganze Seite zu auf und ab zu scrollen
+// Toggle die Navigationsleiste
+asideSectionTogglerBtn = () => {
+  navbar.classList.toggle("open");
+  navTogglerBtn.classList.toggle("open");
+};
+
+// Verbiete die Fähigkeit innerhalb der Navigationsleiste die ganze Seite auf und ab zu scrollen
 navbar.addEventListener("wheel", (e) => {
   e.preventDefault();
   e.stopPropagation();
-
   return false;
 });
+
+// Verbiete die Fähigkeit innerhalb der Navigationsleiste die ganze Seite auf und ab zu scrollen
+// navbar.addEventListener("touchstart", (e) => {
+//   e.preventDefault();
+//   e.stopPropagation();
+//   return false;
+// });
 
 // Beim auf und ab scrollen erscheint oder verschwindet die Navigationsleiste ab window.size 770px
 window.addEventListener("scroll", () => {
@@ -32,17 +45,22 @@ navTogglerBtn.addEventListener("click", () => {
   asideSectionTogglerBtn();
 });
 
-// Bei mouseclick außerhabl von der Navigationsleiste, schiebe es zurück
+// Bei mouseclick auf einen Menüpunkt auf der Navigationsleiste, schiebe es zurück
+for(let i=0; i < navElems.length; i++) {
+//   console.log(navElems[i].innerHTML)
+  navElems[i].addEventListener("click", () => {
+    asideSectionTogglerBtn()
+
+  })
+}
+
+// Bei mouseclick außerhabl auf der Navigationsleiste, schiebe es zurück
 mainContainer.addEventListener("click", () => {
-  navbar.classList.remove("open");
-  navTogglerBtn.classList.remove("open");
+  asideSectionTogglerBtn()
+
 });
 
-// Toggle die Navigationsleiste
-asideSectionTogglerBtn = () => {
-  navbar.classList.toggle("open");
-  navTogglerBtn.classList.toggle("open");
-};
+
 /* ===== End: Nav-Bar Scroll Up and Down ===== */
 
 /* ===== Start: My-Portfolio Section  ===== */

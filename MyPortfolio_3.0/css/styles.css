@@ -141,7 +141,7 @@ select {
 .main-container {
   background-color: rgba(var(--container-bg-color), 1);
   width: min(90%, 1340px);
-  height: 4300px;
+  /* height: 3900px; */
 
   font-style: normal;
   font-weight: 500;
@@ -188,13 +188,16 @@ select {
 }
 
 .navbar .nav li {
-  padding-inline: 1rem;
+  /* border: 1px solid yellow; */
+  padding-inline: 2rem;
+
 }
 
 .navbar .nav li a {
+  /* border: 1px solid blue; */
   text-decoration: none;
   color: rgba(var(--text-color), 1);
-  padding-bottom: 0.5rem;
+  /* padding-bottom: 0.5rem; */
   position: relative;
 }
 
@@ -211,7 +214,10 @@ select {
     #bf841a,
     rgba(0, 0, 0, 0)
   );
+  /* transform: rotate(90deg); */
 }
+
+
 /* ===== End: Navigationbar ===== */
 
 /* ===== Start: Navigation Toggler ===== */
@@ -901,7 +907,7 @@ textarea {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .navbar .nav li {
@@ -1081,9 +1087,9 @@ textarea {
   left: 80%;
 }
 
-
-
-
+.message {
+  color: red;
+}
 
 
 
