@@ -356,7 +356,7 @@ select {
 
   border-top: 1px solid rgba(var(--line), 0.2);
   border-bottom: 1px solid rgba(var(--line), 0.2);
-  background-color: rgba(var(--segment-bg-color), 0.2);
+  background-color: rgba(var(--segment-bg-color), .5);
   display: flex;
   flex-direction: column;
   /* height: auto; */
@@ -488,7 +488,7 @@ select {
   }
 }
 
-.button {
+/* .button {
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
@@ -502,7 +502,7 @@ select {
 .button:focus {
   background-color: mediumaquamarine;
   border-radius: .2rem;
-}
+} */
 
 
 
@@ -511,7 +511,7 @@ select {
 /* ===== Start: My-Profile Section  ===== */
 
 .my-profile {
-  background-color: rgba(var(--segment-bg-color), 0.2);
+  background-color: rgba(var(--segment-bg-color), 0.5);
   position: relative;
   margin-top: 100px;
   display: flex;
@@ -594,7 +594,7 @@ select {
   /* border: 1px solid blue; */
   /* border-top: 1px solid rgba(var(--line), 0.2); */
   border-bottom: 1px solid rgba(var(--line), 0.2);
-  background-color: rgba(var(--segment-bg-color), 0.2);
+  background-color: rgba(var(--segment-bg-color), 0.5);
   position: relative;
   width: 100%;
   height: 580px;
@@ -736,7 +736,7 @@ select {
 .contact-container {
   border-top: 1px solid rgba(var(--line), 0.2);
   border-bottom: 1px solid rgba(var(--line), 0.2);
-  background-color: rgba(var(--segment-bg-color), 0.2);
+  background-color: rgba(var(--segment-bg-color), 0.5);
   position: relative;
   height: 370px;
   margin-top: 13rem;
@@ -780,7 +780,7 @@ select {
   /* border: 1px solid red; */
   border-radius: 4px;
   padding-top: 0.5rem;
-  background-color: rgba(var(--segment-bg-color), 0.2);
+  background-color: rgba(var(--segment-bg-color), 0.5);
   box-shadow: 0px 1px 15px rgba(255, 229, 163, 0.35);
   position: absolute;
   right: calc(25% - 365px);
@@ -804,7 +804,7 @@ textarea {
   padding-top: 25px;
   border: 0;
   border-bottom: 1px solid rgba(var(--line), 0.2);
-  background-color: rgba(var(--segment-bg-color), 0.2);
+  background-color: rgba(var(--segment-bg-color), 0.5);
   color: rgba(var(--text-color), 1);
   outline: none;
   font-size: var(--text-size);
